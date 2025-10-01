@@ -77,7 +77,7 @@
   }
   .hero-space {
     min-height: 100vh; /* altura pantalla completa */
-    background: url("/src/img/galaxia.jpg") center/cover no-repeat;
+    background: url("/img/galaxia.jpg") center/cover no-repeat;
     color: #fff;              /* texto blanco encima */
     position: relative;
   }
