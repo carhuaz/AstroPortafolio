@@ -1,0 +1,139 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Sobre mí · Portafolio">
+  <!-- BREADCRUMB -->
+  <nav class="bg-light border-bottom" aria-label="breadcrumb">
+    <ol class="breadcrumb container my-2">
+      <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Sobre mí</li>
+    </ol>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="container py-5">
+    <div class="row g-4 align-items-center">
+      <!-- Imagen de perfil -->
+      <div class="col-md-4 text-center">
+        <img
+          src="/src/img/perfil.jpg"
+          class="rounded-circle shadow"
+          alt="Foto de perfil de Juan Carhuaz"
+          width="220"
+          height="220"
+        />
+      </div>
+
+      <!-- Texto y datos -->
+      <div class="col-md-8">
+        <h1 class="h2 fw-bold mb-1">Sobre mí</h1>
+        <p class="lead mb-2">
+          “De la teoría a la práctica: construyendo soluciones reales.”
+        </p>
+        <p class="mb-3">
+          Soy estudiante de Ingeniería de Sistemas e Informática con gran
+          interés en tecnología, analítica de datos y desarrollo de aplicaciones
+          web y móviles. Me apasiona aprender a transformar problemas complejos
+          en soluciones prácticas mediante programación, análisis de datos y
+          gestión de proyectos. Participo en proyectos académicos donde aplico
+          mis conocimientos en desarrollo de apps, dashboards de información y
+          optimización de procesos, con enfoque en resultados y aprendizaje
+          constante.
+        </p>
+
+        <div class="row g-3 mt-2">
+          <!-- Datos personales -->
+          <div class="col-sm-6">
+            <div class="list-group small">
+              <div class="list-group-item">
+                <strong>Nombre:</strong> Carhuaz Barzola Juan Abel
+              </div>
+              <div class="list-group-item">
+                <strong>Email:</strong>
+                <a href="mailto:70472274@continental.edu.pe">
+                  70472274@continental.edu.pe
+                </a>
+              </div>
+              <div class="list-group-item">
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://www.linkedin.com/in/juan-carhuaz"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  /in/juan-carhuaz
+                </a>
+              </div>
+              <div class="list-group-item">
+                <strong>Portafolio:</strong>
+                <a
+                  href="https://github.com/carhuaz/dswebPortafolio.git/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Portafolicarhuaz
+                </a>
+              </div>
+              <div class="list-group-item">
+                <strong>Celular:</strong>
+                <a href="tel:+51964733868">(+51) 931 436 146</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formación -->
+          <div class="col-sm-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <h6 class="card-title mb-2">Formación</h6>
+                <ul class="mb-0">
+                  <li>UC (2024–...)</li>
+                  <li>
+                    Ing. de Sistemas e Informática — Univ. Continental
+                    (2024–...)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <!-- Experiencia -->
+        <h3 class="h5 mb-3">Experiencia reciente</h3>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <strong>
+                  Proyecto App de Gestión Académica — Universidad X (2023)
+                </strong>
+                <div class="small text-secondary">
+                  Desarrollo en equipo de una aplicación móvil para organización
+                  de horarios y recordatorios para estudiantes.
+                </div>
+              </div>
+              <span class="badge text-bg-dark">2024</span>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <strong>
+                  Participación en Hackathon Universitaria — (2024)
+                </strong>
+                <div class="small text-secondary">
+                  Desarrollo de un prototipo de sistema web para registro de
+                  préstamos de libros de biblioteca.
+                </div>
+              </div>
+              <span class="badge text-bg-secondary">2015–2019</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</Base>

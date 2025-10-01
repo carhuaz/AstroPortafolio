@@ -1,0 +1,73 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Contacto · Portafolio">
+  <nav class="bg-light border-bottom" aria-label="breadcrumb" style="margin-top: 56px;">
+    <ol class="breadcrumb container my-2">
+      <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+    </ol>
+  </nav>
+
+  <main class="container py-5" style="max-width: 720px">
+    <h1 class="mb-4">Contacto</h1>
+
+    <!-- Datos directos -->
+    <div class="alert alert-light border mb-4">
+      <ul class="list-unstyled mb-0">
+        <li><strong>Email:</strong> <a href="70472274@continental.edu.pe">70472274@continental.edu.pe</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/juan-carhuaz/" target="_blank" rel="noopener">/in/juan-carhuaz</a></li>
+        <li><strong>Portafolio:</strong> <a href="https://github.com/carhuaz/dswebPortafolio.git/" target="_blank" rel="noopener">portafoliocarhuaz</a></li>
+        <li><strong>Celular:</strong> <a href="tel:+51931436146">(+51) 931 436 146</a></li>
+      </ul>
+    </div>
+
+    <!-- Formulario -->
+    <form class="needs-validation" novalidate id="form-contacto">
+      <div class="mb-3">
+        <label class="form-label" for="nombre">Nombre</label>
+        <input class="form-control" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required autocomplete="name" />
+        <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="correo">Correo</label>
+        <input type="email" class="form-control" id="correo" name="correo" placeholder="tucorreo@dominio.com" required autocomplete="email" />
+        <div class="invalid-feedback">Ingresa un correo válido.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="asunto">Asunto (opcional)</label>
+        <input class="form-control" id="asunto" name="asunto" placeholder="Consulta, propuesta, etc." />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="mensaje">Mensaje</label>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame en 2–3 líneas" required></textarea>
+        <div class="invalid-feedback">Escribe un mensaje.</div>
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="1" id="acepto" required />
+        <label class="form-check-label" for="acepto">Acepto que me contactes al correo indicado.</label>
+        <div class="invalid-feedback">Debes aceptar para enviar.</div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-success" type="submit"><i class="bi bi-send me-1"></i>Enviar</button>
+        <button class="btn btn-outline-secondary" type="reset"><i class="bi bi-eraser me-1"></i>Limpiar</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- TOAST -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+    <div id="toastExito" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">¡Gracias! Tu mensaje fue enviado correctamente.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+</Base>

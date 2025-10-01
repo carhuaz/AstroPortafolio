@@ -1,0 +1,98 @@
+/* Splash a pantalla completa */
+#intro{
+    position: fixed;
+    inset: 0;
+    background:#000;
+    color:#eff1f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    z-index:2000;
+    /* visible al inicio */
+    opacity:1;
+    animation: fadeOut 0.8s ease 1.5s forwards;
+  }
+  
+  #intro .intro-text{
+    font-size: clamp(28px, 5vw, 56px);
+    line-height:1.1;
+    text-align:center;
+    letter-spacing:.5px;
+  }
+  
+  /* La animación que faltaba */
+  @keyframes fadeOut{
+    to{
+      opacity:0;
+      visibility:hidden;  
+      pointer-events:none; 
+    }
+  }
+  
+  /* Respeta usuarios con “reducir movimiento” */
+  @media (prefers-reduced-motion: reduce){
+    #intro{ animation: none; visibility: hidden; }
+  }
+  
+  /* Altura responsiva del carrusel */
+  .carousel-h { height: 380px; }
+  @media (max-width: 768px){ .carousel-h { height: 260px; } }
+  
+  /* Si tu imagen no llena, que recorte centrado */
+  .object-fit-cover { object-fit: cover; }
+  
+  .splash.hidden{ opacity:0; visibility:hidden; }
+  
+  #splash-canvas{
+    position:absolute; inset:0; width:100%; height:100%; display:block;
+  }
+  
+  .splash-title{
+    position:relative; margin:0; padding:0 1rem; color:#fff;
+    font-weight:300; text-align:center;
+    font-size:clamp(1.8rem,3vw + 1rem,3rem);
+    letter-spacing:.4px; user-select:none; mix-blend-mode:screen;
+    opacity:0; transform:translateY(8px);
+    animation:splashFadeUp .8s ease .2s forwards;
+  }
+  .splash-title span{ color:#a8a8a8; font-weight:300; }
+  
+  @keyframes splashFadeUp{ to{ opacity:1; transform:none; } }
+  .fall-char{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(-0.8em);
+    animation:fallDown .5s ease-out forwards;
+    will-change: transform;
+  }
+  
+  @keyframes fallDown{
+    to{ opacity:1; transform:none; }
+  }
+  
+  /* Accesibilidad: desactiva animación si el usuario lo pide */
+  @media (prefers-reduced-motion: reduce){
+    .fall-char{ animation:none; opacity:1; transform:none; }
+  }
+  .hero-space {
+    min-height: 100vh; /* altura pantalla completa */
+    background: url("/src/img/galaxia.jpg") center/cover no-repeat;
+    color: #fff;              /* texto blanco encima */
+    position: relative;
+  }
+  
+  /* Overlay oscuro para mejor contraste */
+  .hero-space::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55); /* oscurece la galaxia */
+    z-index: 0;
+  }
+  
+  .hero-space .container {
+    position: relative;
+    z-index: 1; /* asegura que el texto esté encima */
+  }
+  
